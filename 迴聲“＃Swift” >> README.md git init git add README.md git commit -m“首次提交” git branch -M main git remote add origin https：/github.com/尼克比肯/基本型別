@@ -1,0 +1,36 @@
+import UIKit
+typealias MyType = Int
+var someNumber: MyType = 123
+print(someNumber)
+
+var someScore: Int?
+someScore = 100
+someScore = nil
+
+
+//---強制解析---
+
+//宣告一個整數常數 並賦值
+let number3: Int? = 500
+//加上驚嘆號表示這個可選型別有值，可直接使用。
+print(number3!)
+//未賦值，所以目前是nil
+var number4:Int?
+//print(number4!)  硬要用會報錯
+
+//---隱式解析可選型別---
+
+//可選型別
+let oneString: String? = "Good morning."
+//需要驚嘆號來取值
+let anotherString: String = oneString!
+print(oneString!)
+print(anotherString)
+
+//如果改成隱式解析可選型別
+let twoString: String! = "Good night."
+//則可以直接使用，不用加上驚嘆號
+let finalString: String = twoString
+
+print(twoString!)
+print(finalString)
