@@ -1,0 +1,41 @@
+let defaultColor = "red"
+var userDefinedColor: String?  //未指派值，所以預設為nil
+var colorToUse = userDefinedColor ?? defaultColor
+//未指派值給userDefinedColor,所以會返回defaultColor
+//這邊即印出:red
+print(colorToUse)
+// >>> red
+
+//反之如果有指派值
+var userAnotherDefinedColor: String? = "green"
+var anotherColorToUse = userDefinedColor ?? defaultColor
+//這邊即印出: green
+print(anotherColorToUse)
+
+//閉區間運算子
+for index in 1...5 {
+    print("\(index) * 5 = \(index * 5)")
+ 
+ 
+ >>>>
+ 
+red
+red
+1 * 5 = 5
+2 * 5 = 10
+3 * 5 = 15
+4 * 5 = 20
+5 * 5 = 25
+
+
+//半開區間運算子
+for index in 1..<5 {
+    print("\(index) * 5 = \(index * 5)")
+}
+
+>>>
+
+1 * 5 = 5
+2 * 5 = 10
+3 * 5 = 15
+4 * 5 = 20
